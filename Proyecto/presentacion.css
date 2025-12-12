@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif
+}
+
+img {
+  cursor: pointer;
+  display: inline-block;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  width: 100%;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("Fondo\ Ntflix.jpg");
+}
+
+.logo {
+  width: 150px;
+  height: 60px;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 8%;
+}
+
+.bienvenida {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+  justify-content: center; 
+}
+
+.tendencias {
+  margin-top: 20px;
+}
+
+.title-index {
+    margin-inline: 7em;
+    font-size: 4em;
+}
+
+.pack-combit {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.text-price {
+    font-size: 1.4em;
+    margin-block: 20px;
+}
+
+.start-input {
+    background: #201c1c8a;
+    border: #ffffffc4 solid 1px;
+    font-size: 27px;
+    padding: 13px;
+    padding-inline: 33px;
+}
+
+.start-btn {
+    background: #ff0000;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    width: 150px;
+}
+
+.main-content {
+        border-top-left-radius: 30% 12%;
+    /* border: aliceblue solid; */
+    border-top-right-radius: 30% 12%;
+
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav div a {
+  display: inline-flex;
+  align-items: center;
+  margin: 15px;
+  background-color: red;
+  height: 35px;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+nav div a:first-child{
+  background-color: black;
+  border: 1px solid grey;
+}
+
+p { color: white; }
+
+h3 { padding: 10px; border: solid 3px red; color: white; }
+h2 { color: white; 
+  font-family:"serif";
+}
+
+.lenguaje-img { width: 18px; margin-left: 5px; }
+.arrow { width: 10px; margin-right: 10px; }
+
+.container {
+  position: relative;
+  text-align: center;
+  padding-top: 9%;
+}
+
+.container h1 { font-size: 3.8em; margin-bottom: 20px; }
+
+.swiper-slide img { max-width: 100%; border-radius: 5px; }
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next { color: white; }
+
+/* Estilos para el selector de idioma en la cabecera */
+.nav-language { margin-left: 12px; }
+.language-select {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Clase utilitaria para ocultar texto visualmente pero mantenerlo accesible */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.beneficios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 15px;
+  row-gap: 15px;
+  margin-bottom: 30px;
+}
+
+.beneficios div {
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #1c1a33, #381b41);
+  height: 300px;
+  position: relative;
+}
+
+.beneficios div h3{ margin-bottom: 10px; }
+.beneficios div p{ font-size: 15px; }
+.beneficios div img { position: absolute; bottom: 20px; right: 20px; }
+
+/*----------- Preguntas Frecuentes---------------*/
+.accordion li { list-style: none; width: 100%; padding: 5px; }
+.accordion li label{
+  display:flex;
+  padding:20px;
+  height:80px;
+  font-size: 22px;
+  font-weight: 500;
+  background-color:#303030;
+  margin-bottom:2px;
+  cursor:pointer;
+  position:relative;
+}
+
+input[type="checkbox"] { display:none; }
+label::after{
+  content:"+";
+  font-size: 34px;
+  position: absolute;
+  right:20px;
+  transition: transform 0.5s;
+}
+
+.accordion .content {
+  background-color: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 20px;
+  transition: max-height 0.3s, padding 0.3s;
+}
+
+.accordion input[type="checkbox"]:checked + label + .content{
+  max-height: 660px;
+  padding: 30px 20px;
+}
+
+.accordion input[type="checkbox"]:checked + label::after{
+  transform: rotate(135deg);
+}
+
+/*--------------Estilo de pie de pagina-----------*/
+.footer-contenedor{
+  padding: 30px;
+  background-color: #000;
+}
+
+.Textoinformativo h1{
+  font-size:16px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: gray;
+}
+
+.Lista-enlaces{
+  list-style:none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4,1 fr);
+  gap: 15px 30px;
+}
+
+.Lista-enlaces li a :hover{
+  text-decoration: underline;
+}
